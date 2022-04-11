@@ -61,15 +61,14 @@ def tachyon():
         url,
         body=encoded_data,
         headers={
-        'Connection' : 'close',
+        'Connection' : 'keep-alive',
         'Content-Type' : 'application/x-www-form-urlencoded',
         'Cookie': f'sessionid={sid}',
         'x-tt-passport-csrf-token' : f'{sid}',
         'Host' : 'api16-normal-c-useast1a.tiktokv.com',
         'passport-sdk-version' : '5.12.1',
         'sdk-version' : '2',
-        'user-agent' : 'TikTok 21.7.0 rv:217018 (iPad; iOS 15.2; en_CA) Cronet',
-        'x-Tt-Token' : '0378edcbc92e5f1f240932abf37a59f95c062a2dadb0b55273351dd98d6cf974a9657207a32ee94853cd7da9c92a221f94b1513a382cec19d8764d6d28c77a44403751d4cb8676444dc0a621a1525e76e8aef13c4ba2e4e3696ac02b6648962dd7807-1.0.1'
+        'user-agent' : 'TikTok 21.7.0 rv:217018 (iPad; iOS 15.2; en_CA) Cronet'
         })
     attempts+=1
     #print(res.data.decode('utf-8'))
